@@ -1,0 +1,24 @@
+{
+  "keys": [
+    [
+      "did:key:z6MkiB7DQAaJ1LaxUta6RuyyNYNLEomwoUaPzurruGg7dXPQ#z6MkiB7DQAaJ1LaxUta6RuyyNYNLEomwoUaPzurruGg7dXPQ",
+      {
+        "id": "did:key:z6MkiB7DQAaJ1LaxUta6RuyyNYNLEomwoUaPzurruGg7dXPQ#z6MkiB7DQAaJ1LaxUta6RuyyNYNLEomwoUaPzurruGg7dXPQ",
+        "controller": "did:key:z6MkiB7DQAaJ1LaxUta6RuyyNYNLEomwoUaPzurruGg7dXPQ",
+        "type": "Ed25519VerificationKey2020",
+        "publicKeyMultibase": "z6MkiB7DQAaJ1LaxUta6RuyyNYNLEomwoUaPzurruGg7dXPQ",
+        "privateKeyMultibase": "zrv2tMVnP8pX24Japtfu9QtXkzCNo1zt8URaJvKPcyUU855Vi4PH4puj5b7EBkCzK4dCJ5nS6stwju4MnxSSpTeAzvn"
+      }
+    ],
+    [
+      "did:key:z6MkiB7DQAaJ1LaxUta6RuyyNYNLEomwoUaPzurruGg7dXPQ#z6LSoA285oJhX3Kt3n9f7MULfbzM6PTgK4U6wGcffJz149zG",
+      {
+        "id": "did:key:z6MkiB7DQAaJ1LaxUta6RuyyNYNLEomwoUaPzurruGg7dXPQ#z6LSoA285oJhX3Kt3n9f7MULfbzM6PTgK4U6wGcffJz149zG",
+        "controller": "did:key:z6MkiB7DQAaJ1LaxUta6RuyyNYNLEomwoUaPzurruGg7dXPQ",
+        "type": "X25519KeyAgreementKey2020",
+        "publicKeyMultibase": "z6LSoA285oJhX3Kt3n9f7MULfbzM6PTgK4U6wGcffJz149zG",
+        "privateKeyMultibase": "z3weXsyS5vmPo7VDpMUgJLwNVxD8dXJhfZo45mhXGwZJdEgV"
+      }
+    ]
+  ]
+}
