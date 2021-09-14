@@ -15,10 +15,10 @@ public class jwtTest {
     public void quickstartTest() {
         //via https://github.com/jwtk/jjwt#quickstart
         
-        Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+        Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256); // --> use other algorithms here (e.g. asymmetric!)
         String jws = Jwts.builder().setSubject("Joe").signWith(key).compact();
         
-        System.out.println(jws);
+        System.out.println(jws); // --> inspect using e.g. https://jwt.io/
         
         assertTrue(Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(jws).getBody().getSubject().equals("Joe"));
         
