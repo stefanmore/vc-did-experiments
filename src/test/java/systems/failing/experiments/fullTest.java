@@ -103,7 +103,7 @@ public class fullTest {
         signer.setProofPurpose(LDSecurityKeywords.JSONLD_TERM_VERIFICATIONMETHOD);
         signer.setVerificationMethod(URI.create(issuerKeyID));
         signer.setDomain("failing.systems");
-        signer.setNonce("343s$FSFDa-butOnlyOnce");
+        signer.setNonce(UUID.randomUUID().toString());
         LdProof ldProof = signer.sign(verifiableCredential);
         
         return verifiableCredential;

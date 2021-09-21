@@ -21,6 +21,7 @@ import java.security.GeneralSecurityException;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import static org.junit.Assert.assertEquals;
 
@@ -64,7 +65,7 @@ public class LdpExamplesTest {
         signer.setProofPurpose(LDSecurityKeywords.JSONLD_TERM_ASSERTIONMETHOD);
         signer.setVerificationMethod(URI.create("did:example:76e12ec712ebc6f1c221ebfeb1f#keys-1"));
         signer.setDomain("example.com");
-        signer.setNonce("343s$FSFDa-");
+        signer.setNonce(UUID.randomUUID().toString());
         LdProof ldProof = signer.sign(verifiableCredential);
         
         try(final FileWriter fileWriter = new FileWriter("/tmp/LdpExample.jsonld")) {
