@@ -130,7 +130,6 @@ public class fullTest {
         
         VerificationMethod authVerifyMethod = didDocument.getAuthenticationVerificationMethods().get(0);
         
-        byte[] publicKeyBytes;
         switch(authVerifyMethod.getType()) {
             case "Ed25519VerificationKey2018":
                 assertNotNull("Unsupported: Verification type is Ed25519VerificationKey2018, but encoding is not Base58.", authVerifyMethod.getPublicKeyBase58());
