@@ -130,15 +130,23 @@ public class fullTest {
         
         VerificationMethod authVerifyMethod = didDocument.getAuthenticationVerificationMethods().get(0);
         
-        assertEquals("Ed25519VerificationKey2018", authVerifyMethod.getType());
+        byte[] publicKeyBytes;
+        switch(authVerifyMethod.getType()) {
+            case "Ed25519VerificationKey2018":
+                assertNotNull("Unsupported: Verification type is Ed25519VerificationKey2018, but encoding is not Base58.", authVerifyMethod.getPublicKeyBase58());
+                final String publicKeyBase58 = authVerifyMethod.getPublicKeyBase58();
+                return Base58.decode(publicKeyBase58);
+            
+            case "Ed25519VerificationKey2020":
+                assertNotNull("Unsupported: Verification type is Ed25519VerificationKey2020, but encoding is not Multibase.", authVerifyMethod.getPublicKeyMultibase());
+                final String publicKeyMultibase = authVerifyMethod.getPublicKeyMultibase();
+                return Multibase.decode(publicKeyMultibase);
+            
+            default:
+                fail("Invalid VerificationMethod type found in DID document: " + authVerifyMethod.getType());
+        }
         
-        assertNotNull(authVerifyMethod.getPublicKeyBase58());
-        final String publicKeyBase58 = authVerifyMethod.getPublicKeyBase58();
-        byte[] publicKeyBytes = Base58.decode(publicKeyBase58);
-        
-        System.out.println("Returning key " + authVerifyMethod.getId());
-        
-        return publicKeyBytes;
+        return null;
     }
     
     public static byte[] decodeKey(String keyMultibase) {
