@@ -12,7 +12,7 @@ jobs:
         # https://github.com/actions/setup-java#supported-distributions
         java_version: [ '8', '11', '16', '17' ]
 
-    name: Buld and Test for Java ${{java_version }}
+    name: Buld and Test for Java ${{ matrix.java_version }}
 
     steps:
       - uses: actions/checkout@v2
