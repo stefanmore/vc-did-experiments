@@ -140,7 +140,7 @@ public class fullTest {
             case "Ed25519VerificationKey2020":
                 assertNotNull("Unsupported: Verification type is Ed25519VerificationKey2020, but encoding is not Multibase.", authVerifyMethod.getPublicKeyMultibase());
                 final String publicKeyMultibase = authVerifyMethod.getPublicKeyMultibase();
-                return Multibase.decode(publicKeyMultibase);
+                return decodeKey(publicKeyMultibase);
             
             default:
                 fail("Invalid VerificationMethod type found in DID document: " + authVerifyMethod.getType());
