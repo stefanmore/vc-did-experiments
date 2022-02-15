@@ -9,9 +9,9 @@ jobs:
 
     strategy:
       matrix:
-      # https://github.com/actions/setup-java#supported-distributions
-      #java_version: [ '8', '11', '16', '17' ]
-      java_version: [ '16', ]
+        # https://github.com/actions/setup-java#supported-distributions
+        # java_version: [ '8', '11', '16', '17' ]
+        java_version: [ '16' ]
 
     name: Buld and Test for Java ${{ matrix.java_version }}
 
